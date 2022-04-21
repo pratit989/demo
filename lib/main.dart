@@ -1,24 +1,17 @@
-import 'package:flutter/gestures.dart';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:demo/home_page/home_page_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/internationalization.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'custom_code/custom_theme.dart';
 import 'home_page/home_page_widget.dart';
-import 'home_page_copy/home_page_copy_widget.dart';
-import 'home_page_copy_copy2/home_page_copy_copy2_widget.dart';
-import 'home_page_copy_copy/home_page_copy_copy_widget.dart';
-import 'home_page_copy_copy_copy/home_page_copy_copy_copy_widget.dart';
 
 void main() async {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -27,28 +20,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _locale;
-  ThemeMode _themeMode = ThemeMode.system;
-
-  void setLocale(Locale value) => setState(() => _locale = value);
-  void setThemeMode(ThemeMode mode) => setState(() {
-        _themeMode = mode;
-      });
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Demo',
       localizationsDelegates: [
-        FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: _locale,
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(brightness: Brightness.light),
-      themeMode: _themeMode,
       home: NavBarPage(),
     );
   }
@@ -63,7 +46,6 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPage = 'HomePage';
 
@@ -77,65 +59,104 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': HomePageWidget(),
-      'HomePageCopy': HomePageCopyWidget(),
-      'HomePageCopyCopy2': HomePageCopyCopy2Widget(),
-      'HomePageCopyCopy': HomePageCopyCopyWidget(),
-      'HomePageCopyCopyCopy': HomePageCopyCopyCopyWidget(),
+      'HomePageCopy': Scaffold(),
+      'HomePageCopyCopy2': Scaffold(),
+      'HomePageCopyCopy': Scaffold(),
+      'HomePageCopyCopyCopy': Scaffold(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
+      extendBody: true,
       body: tabs[_currentPage],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-        backgroundColor: Colors.white,
-        selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
-        unselectedItemColor: Color(0x8A000000),
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24,
-            ),
-            label: 'Home',
-            tooltip: '',
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: GestureDetector(
+        onTap: () => setState(() => _currentPage = tabs.keys.toList()[2]),
+        child: CircleAvatar(
+          child: Image.asset("assets/images/centerIcon.png"),
+          radius: 25,
+          backgroundColor: Colors.black,
+        ),
+      ),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(19)),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: 16,
+            sigmaY: 16
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              size: 24,
+          child: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            color: Color.fromARGB(26, 95, 100, 121),
+            elevation: 0,
+            notchMargin: 8,
+            child: BottomNavigationBar(
+              elevation: 0,
+              currentIndex: currentIndex,
+              onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
+              backgroundColor: Color(0x00000000),
+              selectedItemColor: Colors.black,
+              unselectedItemColor: Colors.black,
+              showSelectedLabels: true,
+              showUnselectedLabels: true,
+              type: BottomNavigationBarType.fixed,
+              selectedLabelStyle: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+              ),
+              unselectedFontSize: 11,
+              selectedFontSize: 11,
+              items: <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage("assets/images/home-2.png"),
+                    size: 24,
+                  ),
+                  label: 'Home',
+                  tooltip: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage("assets/images/search-normal.png"),
+                    size: 24,
+                  ),
+                  label: 'Search',
+                  tooltip: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Container(
+                    height: kToolbarHeight-8,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                            child: Text("More", style: TextStyle(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w600),),
+                        ),
+                      ],
+                    ),
+                  ),
+                  label: ' ',
+                  tooltip: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage("assets/images/star.png"),
+                    size: 24,
+                  ),
+                  label: 'Favourite',
+                  tooltip: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage("assets/images/profile-circle.png"),
+                    size: 24,
+                  ),
+                  label: 'Profile',
+                  tooltip: '',
+                ),
+              ],
             ),
-            label: 'Search',
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.check_box_outline_blank,
-              size: 24,
-            ),
-            label: 'Search',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle_outlined,
-              size: 24,
-            ),
-            label: 'Profile',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.star,
-              size: 24,
-            ),
-            label: 'Favourite',
-            tooltip: '',
-          )
-        ],
+        ),
       ),
     );
   }

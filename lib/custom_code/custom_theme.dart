@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-abstract class FlutterFlowTheme {
-  static FlutterFlowTheme of(BuildContext context) => LightModeTheme();
+abstract class CustomTheme {
+  static CustomTheme of(BuildContext context) => LightModeTheme();
 
   Color primaryColor;
   Color secondaryColor;
@@ -62,7 +62,7 @@ abstract class FlutterFlowTheme {
       );
 }
 
-class LightModeTheme extends FlutterFlowTheme {
+class LightModeTheme extends CustomTheme {
   Color primaryColor = const Color(0xFF969696);
   Color secondaryColor = const Color(0xFF39D2C0);
   Color tertiaryColor = const Color(0xFFEE8B60);

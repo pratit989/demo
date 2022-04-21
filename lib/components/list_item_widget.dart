@@ -1,7 +1,5 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '../custom_code/custom_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ListItemWidget extends StatefulWidget {
   const ListItemWidget({Key key}) : super(key: key);
@@ -70,7 +68,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                   children: [
                     Text(
                       'Oush Adasy',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: CustomTheme.of(context).bodyText1.override(
                             fontFamily: 'Open Sans',
                             color: Color(0xFF171717),
                             fontSize: 14,
@@ -85,7 +83,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                           children: [
                             Text(
                               '\$ 7.5',
-                              style: FlutterFlowTheme.of(context)
+                              style: CustomTheme.of(context)
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Open Sans',
@@ -95,7 +93,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                             ),
                             Text(
                               '/ Night',
-                              style: FlutterFlowTheme.of(context)
+                              style: CustomTheme.of(context)
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Open Sans',
@@ -128,7 +126,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                         Text(
                           'Istanbul',
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              CustomTheme.of(context).bodyText1.override(
                                     fontFamily: 'Open Sans',
                                     color: Color(0x8A000000),
                                     fontSize: 12,
@@ -143,7 +141,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                         Text(
                           '\$12',
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              CustomTheme.of(context).bodyText1.override(
                                     fontFamily: 'Open Sans',
                                     color: Color(0xFF171717),
                                     fontSize: 12,
@@ -152,7 +150,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                         Text(
                           '/ Night',
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              CustomTheme.of(context).bodyText1.override(
                                     fontFamily: 'Open Sans',
                                     color: Color(0xFF171717),
                                     fontSize: 12,

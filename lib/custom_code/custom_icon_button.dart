@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FlutterFlowIconButton extends StatelessWidget {
-  const FlutterFlowIconButton(
+class CustomIconButton extends StatelessWidget {
+  const CustomIconButton(
       {Key key,
       this.borderColor,
       this.borderRadius,
