@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:demo/hotel_hostel_room/hotel_hostel_room.dart';
+import 'package:demo/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:demo/home_page/home_page_widget.dart';
@@ -60,7 +61,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'HomePage': HomePageWidget(),
       'HomePageCopy': HomePageCopyWidget(),
       'HomePageCopyCopy2': Scaffold(),
-      'HomePageCopyCopy': Scaffold(),
+      'HomePageCopyCopy': HomePageCopyCopyWidget(),
       'HomePageCopyCopyCopy': Scaffold(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
