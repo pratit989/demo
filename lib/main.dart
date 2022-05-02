@@ -4,8 +4,6 @@ import 'package:demo/hotel_hostel_room/hotel_hostel_room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:demo/home_page/home_page_widget.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'custom_code/custom_theme.dart';
 import 'home_page/home_page_widget.dart';
 
 void main() async {
