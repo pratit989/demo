@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:demo/hotel_hostel_room/hotel_hostel_room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:demo/home_page/home_page_widget.dart';
@@ -59,7 +60,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': HomePageWidget(),
-      'HomePageCopy': Scaffold(),
+      'HomePageCopy': HomePageCopyWidget(),
       'HomePageCopyCopy2': Scaffold(),
       'HomePageCopyCopy': Scaffold(),
       'HomePageCopyCopyCopy': Scaffold(),
