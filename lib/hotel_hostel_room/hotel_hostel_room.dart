@@ -184,8 +184,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                         indicatorWeight: 1,
                         tabs: [
                           Tab(
-                            text: 'Hotel',
-                            icon: FaIcon(
+                            child: FaIcon(
                               FontAwesomeIcons.hotel,
                               color: Color(0xFF292D32),
                             ),
