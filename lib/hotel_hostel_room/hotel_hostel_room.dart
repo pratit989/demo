@@ -26,187 +26,194 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
       backgroundColor: Color(0xFFE5E5E5),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.45,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: Image.asset(
-                          'assets/images/Rectangle_53.png',
-                        ).image,
-                      ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.45,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/Rectangle_53.png',
+                      ).image,
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CustomIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 18,
-                                borderWidth: 1,
-                                buttonSize: 60,
-                                icon: Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Colors.white,
-                                  size: 18,
-                                ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
-                              ),
-                              Text(
-                                'Metoospace',
-                                textAlign: TextAlign.center,
-                                style: CustomTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                  fontFamily: 'Open Sans',
-                                  color: CustomTheme.of(context)
-                                      .primaryBackground,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              CustomIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 20,
-                                borderWidth: 1,
-                                buttonSize: 60,
-                                icon: Icon(
-                                  Icons.notifications_none,
-                                  color: Colors.white,
-                                  size: 20,
-                                ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                          EdgeInsetsDirectional.fromSTEB(20, 100, 0, 0),
-                          child: Text(
-                            'Find The Next\nAmazing Hotel to Rent',
-                            style:
-                            CustomTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CustomIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 18,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.arrow_back_ios,
                               color: Colors.white,
-                              fontSize: 25,
+                              size: 18,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                          Text(
+                            'Metoospace',
+                            textAlign: TextAlign.center,
+                            style: CustomTheme.of(context)
+                                .bodyText1
+                                .override(
+                              fontFamily: 'Open Sans',
+                              color: CustomTheme.of(context)
+                                  .primaryBackground,
+                              fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 20),
-                          child: Text(
-                            'we provide best paces to renting for a night or even hours...',
-                            style:
-                            CustomTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
+                          CustomIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.notifications_none,
                               color: Colors.white,
-                              fontSize: 13,
-                              fontWeight: FontWeight.normal,
+                              size: 20,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                      EdgeInsetsDirectional.fromSTEB(20, 100, 0, 0),
+                      child: Text(
+                        'Find The Next\nAmazing Hotel to Rent',
+                        style:
+                        CustomTheme.of(context).bodyText1.override(
+                          fontFamily: 'Open Sans',
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 20),
+                      child: Text(
+                        'we provide best paces to renting for a night or even hours...',
+                        style:
+                        CustomTheme.of(context).bodyText1.override(
+                          fontFamily: 'Open Sans',
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding:
+                            EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                            child: Text(
+                              'Discover More',
+                              style: CustomTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                fontFamily: 'Open Sans',
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
-                                child: Text(
-                                  'Discover More',
-                                  style: CustomTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                    fontFamily: 'Open Sans',
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                ),
-                              ),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                                size: 13,
-                              ),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                            size: 13,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.45,
+              decoration: BoxDecoration(
+                color: Color(0xFFE5E5E5),
+              ),
+              child: DefaultTabController(
+                length: 3,
+                initialIndex: 0,
+                child: Column(
+                  children: [
+                    TabBar(
+                      labelColor: Colors.white,
+                      labelStyle:
+                      CustomTheme.of(context).bodyText1.override(
+                        fontFamily: 'Open Sans',
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      unselectedLabelColor: Colors.black,
+                      indicator: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0xFF494949),
+                              Color(0xFF2D2D2D)
                             ],
+                          )
+                      ),
+                      indicatorColor: Color(0xFF969696),
+                      indicatorWeight: 1,
+                      tabs: [
+                        Tab(
+                          text: 'Hotel',
+                          icon: ImageIcon(
+                            AssetImage("assets/images/buliding.png"),
+                          ),
+                        ),
+                        Tab(
+                          text: 'Hostel',
+                          icon: ImageIcon(
+                            AssetImage("assets/images/building-3.png"),
+                          ),
+                        ),
+                        Tab(
+                          text: 'Room',
+                          icon: ImageIcon(
+                            AssetImage("assets/images/house-2.png"),
                           ),
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.45,
-                decoration: BoxDecoration(
-                  color: Color(0xFFE5E5E5),
-                ),
-                child: DefaultTabController(
-                  length: 3,
-                  initialIndex: 0,
-                  child: Column(
-                    children: [
-                      TabBar(
-                        labelColor: Colors.black,
-                        labelStyle:
-                        CustomTheme.of(context).bodyText1.override(
-                          fontFamily: 'Open Sans',
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        indicatorColor: Color(0xFF969696),
-                        indicatorWeight: 1,
-                        tabs: [
-                          Tab(
-                            child: FaIcon(
-                              FontAwesomeIcons.hotel,
-                              color: Color(0xFF292D32),
-                            ),
-                          ),
-                          Tab(
-                            text: 'Hostel',
-                            icon: Icon(
-                              Icons.apartment,
-                            ),
-                          ),
-                          Tab(
-                            text: 'Room',
-                            icon: Icon(
-                              Icons.house,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Expanded(
-                        child: TabBarView(
-                          children: [
-                            SingleChildScrollView(
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          SingleChildScrollView(
+                            child: Container(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -214,7 +221,8 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         20, 0, 20, 0),
                                     child: SwitchListTile(
-                                      value: switchListTileValue ??= false,
+                                      inactiveThumbColor: Colors.black87,
+                                      value: switchListTileValue ??= true,
                                       onChanged: (newValue) => setState(
                                               () => switchListTileValue = newValue),
                                       title: Text(
@@ -229,7 +237,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                         ),
                                       ),
                                       tileColor: Color(0xFFF5F5F5),
-                                      activeColor: Color(0xFFE3E3E3),
+                                      activeColor: Colors.white,
                                       activeTrackColor: Color(0xFFE3E3E3),
                                       dense: false,
                                       controlAffinity:
@@ -394,7 +402,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 30, 0, 0),
                                     child: Container(
-                                      width: 340,
+                                      width: MediaQuery.of(context).size.width*0.9,
                                       height: 42,
                                       decoration: BoxDecoration(
                                         color: Colors.white,
@@ -469,130 +477,133 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 10, 0, 0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Container(
-                                          width: 165,
-                                          height: 42,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                            BorderRadius.circular(4),
-                                            border: Border.all(
-                                              color: Color(0xFFDDDDDD),
-                                              width: 1,
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width*0.9,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            width: MediaQuery.of(context).size.width*0.4,
+                                            height: 42,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                              BorderRadius.circular(4),
+                                              border: Border.all(
+                                                color: Color(0xFFDDDDDD),
+                                                width: 1,
+                                              ),
+                                            ),
+                                            child: Padding(
+                                              padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  MediaQuery.of(context).size.width*0.025, 0, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                MainAxisAlignment
+                                                    .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    mainAxisSize:
+                                                    MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                            0, 0, 10, 0),
+                                                        child: FaIcon(
+                                                          FontAwesomeIcons
+                                                              .calendarAlt,
+                                                          color: Colors.black,
+                                                          size: 24,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'Open Hotels List',
+                                                        style:
+                                                        CustomTheme.of(
+                                                            context)
+                                                            .bodyText1
+                                                            .override(
+                                                          fontFamily:
+                                                          'Open Sans',
+                                                          fontSize: 13,
+                                                          fontWeight:
+                                                          FontWeight
+                                                              .normal,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                          child: Padding(
-                                            padding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                20, 0, 20, 0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                  MainAxisSize.max,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                      EdgeInsetsDirectional
-                                                          .fromSTEB(
-                                                          0, 0, 10, 0),
-                                                      child: FaIcon(
-                                                        FontAwesomeIcons
-                                                            .calendarAlt,
-                                                        color: Colors.black,
-                                                        size: 24,
+                                          Container(
+                                            width: MediaQuery.of(context).size.width*0.4,
+                                            height: 42,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                              BorderRadius.circular(4),
+                                              border: Border.all(
+                                                color: Color(0xFFDDDDDD),
+                                                width: 1,
+                                              ),
+                                            ),
+                                            child: Padding(
+                                              padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  MediaQuery.of(context).size.width*0.025, 0, 0, 0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                MainAxisAlignment
+                                                    .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    mainAxisSize:
+                                                    MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                            0, 0, 10, 0),
+                                                        child: FaIcon(
+                                                          FontAwesomeIcons
+                                                              .calendar,
+                                                          color: Colors.black,
+                                                          size: 24,
+                                                        ),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      'Open Hotels List',
-                                                      style:
-                                                      CustomTheme.of(
-                                                          context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Open Sans',
-                                                        fontSize: 13,
-                                                        fontWeight:
-                                                        FontWeight
-                                                            .normal,
+                                                      Text(
+                                                        'Check-Out-Date',
+                                                        style:
+                                                        CustomTheme.of(
+                                                            context)
+                                                            .bodyText1
+                                                            .override(
+                                                          fontFamily:
+                                                          'Open Sans',
+                                                          fontSize: 13,
+                                                          fontWeight:
+                                                          FontWeight
+                                                              .normal,
+                                                        ),
                                                       ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        Container(
-                                          width: 165,
-                                          height: 42,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                            BorderRadius.circular(4),
-                                            border: Border.all(
-                                              color: Color(0xFFDDDDDD),
-                                              width: 1,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                20, 0, 20, 0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                  MainAxisSize.max,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                      EdgeInsetsDirectional
-                                                          .fromSTEB(
-                                                          0, 0, 10, 0),
-                                                      child: FaIcon(
-                                                        FontAwesomeIcons
-                                                            .calendar,
-                                                        color: Colors.black,
-                                                        size: 24,
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      'Check-Out-Date',
-                                                      style:
-                                                      CustomTheme.of(
-                                                          context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Open Sans',
-                                                        fontSize: 13,
-                                                        fontWeight:
-                                                        FontWeight
-                                                            .normal,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -669,7 +680,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                   ),
                                   Container(
                                     width: MediaQuery.of(context).size.width,
-                                    height: 287,
+                                    height: 290,
                                     decoration: BoxDecoration(),
                                     child: ListView(
                                       padding: EdgeInsets.zero,
@@ -684,33 +695,33 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                                 ],
                               ),
                             ),
-                            Text(
-                              'Tab View 3',
-                              style: CustomTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                fontFamily: 'Open Sans',
-                                fontSize: 32,
-                              ),
+                          ),
+                          Text(
+                            'Tab View 3',
+                            style: CustomTheme.of(context)
+                                .bodyText1
+                                .override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 32,
                             ),
-                            Text(
-                              'Tab View 4',
-                              style: CustomTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                fontFamily: 'Open Sans',
-                                fontSize: 32,
-                              ),
+                          ),
+                          Text(
+                            'Tab View 4',
+                            style: CustomTheme.of(context)
+                                .bodyText1
+                                .override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 32,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -40,7 +40,7 @@ class _ListItemCopyCopyWidgetState extends State<ListItemCopyCopyWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(6, 6, 6, 20),
+                      padding: EdgeInsetsDirectional.fromSTEB(6, 6, 6, 8),
                       child: Container(
                         width: 237,
                         height: 247,

@@ -58,11 +58,11 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'HomePage': HomePageWidget(),
-      'HomePageCopy': HomePageCopyWidget(),
+      'HomePage': HomePageCopyWidget(),
+      'HomePageCopy': HomePageWidget(),
       'HomePageCopyCopy2': Scaffold(),
-      'HomePageCopyCopy': HomePageCopyCopyWidget(),
-      'HomePageCopyCopyCopy': Scaffold(),
+      'HomePageCopyCopy': Scaffold(),
+      'HomePageCopyCopyCopy': HomePageCopyCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
@@ -93,7 +93,7 @@ class _NavBarPageState extends State<NavBarPage> {
               elevation: 0,
               currentIndex: currentIndex,
               onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-              backgroundColor: Color(0x00000000),
+              backgroundColor: Color.fromARGB(0, 0, 0, 0),
               selectedItemColor: Colors.black,
               unselectedItemColor: Colors.black,
               showSelectedLabels: true,
