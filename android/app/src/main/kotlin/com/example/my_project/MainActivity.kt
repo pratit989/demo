@@ -1,4 +1,4 @@
-package com.oluha.metoospace
+package com.oluhagroup.metoospace
 
 import io.flutter.embedding.android.FlutterActivity
 
