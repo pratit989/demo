@@ -3,16 +3,17 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class UserGalleryItemScreenSliderWidget extends StatefulWidget {
-  const UserGalleryItemScreenSliderWidget({Key key}) : super(key: key);
+class UserGalleryItemReplyScreenVideoPausedWidget extends StatefulWidget {
+  const UserGalleryItemReplyScreenVideoPausedWidget({Key key})
+      : super(key: key);
 
   @override
-  _UserGalleryItemScreenSliderWidgetState createState() =>
-      _UserGalleryItemScreenSliderWidgetState();
+  _UserGalleryItemReplyScreenVideoPausedWidgetState createState() =>
+      _UserGalleryItemReplyScreenVideoPausedWidgetState();
 }
 
-class _UserGalleryItemScreenSliderWidgetState
-    extends State<UserGalleryItemScreenSliderWidget> {
+class _UserGalleryItemReplyScreenVideoPausedWidgetState
+    extends State<UserGalleryItemReplyScreenVideoPausedWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -72,71 +73,61 @@ class _UserGalleryItemScreenSliderWidgetState
             ),
             Stack(
               children: [
-                Align(
-                  alignment: AlignmentDirectional(0.06, -0.04),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 2, 10),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/pexels-megan-ruth-11754055_1.png',
-                        width: 340,
-                        height: 440,
-                        fit: BoxFit.cover,
-                      ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset(
+                      'assets/images/pexels-megan-ruth-11754055_1.png',
+                      width: 340,
+                      height: 440,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                Align(
-                  alignment: AlignmentDirectional(0, 1),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 420, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFF3F7F5),
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                          child: Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                              color: Color(0x7FF3F7F5),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                          child: Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                              color: Color(0x7FF3F7F5),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                          child: Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                              color: Color(0x80F3F7F5),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(12, 413, 0, 0),
+                  child: Icon(
+                    Icons.volume_mute_outlined,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(24, 417, 0, 0),
+                  child: Icon(
+                    Icons.clear_sharp,
+                    color: Colors.white,
+                    size: 10,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(152, 204, 0, 0),
+                  child: Icon(
+                    Icons.play_arrow,
+                    color: FlutterFlowTheme.of(context).primaryBtnText,
+                    size: 30,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(12, 300, 0, 0),
+                  child: Container(
+                    width: 24,
+                    height: 18.46,
+                    decoration: BoxDecoration(
+                      color: Color(0x673F403F),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(150, 122, 0, 0),
+                  child: Container(
+                    width: 44,
+                    height: 32,
+                    decoration: BoxDecoration(
+                      color: Color(0x673F403F),
+                      borderRadius: BorderRadius.circular(48),
                     ),
                   ),
                 ),

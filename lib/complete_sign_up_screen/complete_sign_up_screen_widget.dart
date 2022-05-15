@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home_screen/home_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -42,7 +43,7 @@ class _CompleteSignUpScreenWidgetState
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: Color(0xFF9E9E9E),
                       offset: Offset(2, 2),
                     )
                   ],
@@ -73,7 +74,7 @@ class _CompleteSignUpScreenWidgetState
                       'Birthdate(dd MMM YYYY)',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x9A3F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -92,7 +93,7 @@ class _CompleteSignUpScreenWidgetState
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 7,
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: Color(0xFF9E9E9E),
                       offset: Offset(2, 2),
                     )
                   ],
@@ -126,6 +127,7 @@ class _CompleteSignUpScreenWidgetState
                       'Phone Number',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
+                            color: Color(0x98101213),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -144,7 +146,7 @@ class _CompleteSignUpScreenWidgetState
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: Color(0xFF9E9E9E),
                       offset: Offset(2, 2),
                     )
                   ],
@@ -175,7 +177,7 @@ class _CompleteSignUpScreenWidgetState
                       'Password',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x983F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -187,8 +189,13 @@ class _CompleteSignUpScreenWidgetState
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 0),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreenWidget(),
+                    ),
+                  );
                 },
                 text: 'Setup',
                 options: FFButtonOptions(

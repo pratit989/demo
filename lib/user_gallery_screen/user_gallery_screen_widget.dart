@@ -1,0 +1,238 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class UserGalleryScreenWidget extends StatefulWidget {
+  const UserGalleryScreenWidget({Key key}) : super(key: key);
+
+  @override
+  _UserGalleryScreenWidgetState createState() =>
+      _UserGalleryScreenWidgetState();
+}
+
+class _UserGalleryScreenWidgetState extends State<UserGalleryScreenWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                scrollDirection: Axis.vertical,
+                children: [
+                  Stack(
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
+                        child: Image.asset(
+                          'assets/images/Pic.png',
+                          width: 375,
+                          height: 350,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 18,
+                              borderWidth: 1,
+                              buttonSize: 60,
+                              icon: Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.white,
+                                size: 18,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                            Text(
+                              'Ariana',
+                              textAlign: TextAlign.center,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Baloo Chettan 2',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                            ),
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 20,
+                              borderWidth: 1,
+                              buttonSize: 60,
+                              icon: Icon(
+                                Icons.more_vert,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  GridView(
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 1,
+                      mainAxisSpacing: 1,
+                      childAspectRatio: 1,
+                    ),
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Image.asset(
+                        'assets/images/Rectangle_67.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_68.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_69.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_70.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_71.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_72.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_73.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_74.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/Rectangle_75.png',
+                        width: 142,
+                        height: 142,
+                        fit: BoxFit.cover,
+                      ),
+                      Stack(
+                        children: [
+                          Image.asset(
+                            'assets/images/Rectangle_76.png',
+                            width: 142,
+                            height: 142,
+                            fit: BoxFit.cover,
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(97, 97, 0, 0),
+                            child: Icon(
+                              Icons.play_arrow_rounded,
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              size: 24,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Stack(
+                        children: [
+                          Image.asset(
+                            'assets/images/Rectangle_77.png',
+                            width: 142,
+                            height: 142,
+                            fit: BoxFit.cover,
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(97, 97, 0, 0),
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              decoration: BoxDecoration(
+                                color: Color(0x653F403F),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Stack(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        3, 3, 0, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.circle,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                      size: 10,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        6, 6, 0, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.circle,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                      size: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

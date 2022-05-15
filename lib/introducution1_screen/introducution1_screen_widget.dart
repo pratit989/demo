@@ -1,104 +1,89 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../introducution2_screen/introducution2_screen_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Introdocution1ScreenWidget extends StatefulWidget {
-  const Introdocution1ScreenWidget({Key key}) : super(key: key);
+class Introducution1ScreenWidget extends StatefulWidget {
+  const Introducution1ScreenWidget({Key key}) : super(key: key);
 
   @override
-  _Introdocution1ScreenWidgetState createState() =>
-      _Introdocution1ScreenWidgetState();
+  _Introducution1ScreenWidgetState createState() =>
+      _Introducution1ScreenWidgetState();
 }
 
-class _Introdocution1ScreenWidgetState
-    extends State<Introdocution1ScreenWidget> {
-  PageController pageViewController;
+class _Introducution1ScreenWidgetState
+    extends State<Introducution1ScreenWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Introducution2ScreenWidget(),
+        ),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              Image.asset(
+                'assets/images/undraw_world_re_768g_1.png',
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.5,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  child: Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
-                        child: PageView(
-                          controller: pageViewController ??=
-                              PageController(initialPage: 0),
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            Image.asset(
-                              'assets/images/undraw_world_re_768g_1.png',
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.5,
-                              fit: BoxFit.fitWidth,
-                            ),
-                            Image.asset(
-                              'assets/images/undraw_world_re_768g_1.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.fitWidth,
-                            ),
-                            Image.asset(
-                              'assets/images/undraw_world_re_768g_1.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.fitWidth,
-                            ),
-                          ],
+                height: MediaQuery.of(context).size.height * 0.43,
+                fit: BoxFit.fitWidth,
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 45),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 12,
+                      height: 12,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF7161EF),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: Color(0x337161EF),
+                          shape: BoxShape.circle,
                         ),
                       ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 1),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                          child: SmoothPageIndicator(
-                            controller: pageViewController ??=
-                                PageController(initialPage: 0),
-                            count: 3,
-                            axisDirection: Axis.horizontal,
-                            onDotClicked: (i) {
-                              pageViewController.animateToPage(
-                                i,
-                                duration: Duration(milliseconds: 500),
-                                curve: Curves.ease,
-                              );
-                            },
-                            effect: ExpandingDotsEffect(
-                              expansionFactor: 2,
-                              spacing: 8,
-                              radius: 16,
-                              dotWidth: 16,
-                              dotHeight: 16,
-                              dotColor: Color(0xFF9E9E9E),
-                              activeDotColor: Color(0xFF3F51B5),
-                              paintStyle: PaintingStyle.fill,
-                            ),
-                          ),
-                        ),
+                    ),
+                    Container(
+                      width: 12,
+                      height: 12,
+                      decoration: BoxDecoration(
+                        color: Color(0x337161EF),
+                        shape: BoxShape.circle,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Container(
@@ -177,8 +162,14 @@ class _Introdocution1ScreenWidgetState
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(229, 180, 0, 0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    Introducution2ScreenWidget(),
+                              ),
+                            );
                           },
                           text: 'Next',
                           options: FFButtonOptions(

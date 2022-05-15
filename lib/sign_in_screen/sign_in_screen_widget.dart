@@ -1,6 +1,8 @@
+import '../complete_sign_up_screen/complete_sign_up_screen_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home_screen/home_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,14 +27,56 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/Login.png',
-              width: 428,
-              height: 428,
-              fit: BoxFit.cover,
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/SI.png',
+                  width: 428,
+                  height: 428,
+                  fit: BoxFit.cover,
+                ),
+                Align(
+                  alignment: AlignmentDirectional(0, -0.75),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 48, 0, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: Text(
+                            'Sign In',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Spectral',
+                                      color: Color(0xFFF3F7F5),
+                                      fontSize: 33,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+                          child: Text(
+                            'Welcome back! There is always a place for you.',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Work Sans',
+                                      color: Color(0xFFF3F7F5),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
               child: Container(
                 width: 396,
                 height: 46,
@@ -40,9 +84,9 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 7,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -54,12 +98,11 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Image.asset(
-                        'assets/images/Vector.png',
-                        width: 16,
-                        height: 16,
-                        fit: BoxFit.cover,
+                      padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                      child: Icon(
+                        Icons.mail_outlined,
+                        color: Colors.black,
+                        size: 20,
                       ),
                     ),
                     Padding(
@@ -72,9 +115,10 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                       ),
                     ),
                     Text(
-                      'Phone Number',
+                      'Email or Phone Number',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
+                            color: Color(0x99101213),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -92,9 +136,9 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 7,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -129,6 +173,7 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                         'Password',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Work Sans',
+                              color: Color(0x99101213),
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
                             ),
@@ -141,8 +186,13 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 25, 10, 0),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreenWidget(),
+                    ),
+                  );
                 },
                 text: 'Sign In',
                 options: FFButtonOptions(
@@ -188,18 +238,29 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            blurRadius: 7,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            offset: Offset(2, 2),
+                            blurRadius: 6,
+                            color: Color(0xFF9E9E9E),
+                            offset: Offset(1, 1),
                           )
                         ],
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Image.asset(
-                        'assets/images/logos_google-icon.png',
-                        width: 32,
-                        height: 32,
-                        fit: BoxFit.none,
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CompleteSignUpScreenWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/logos_google-icon.png',
+                          width: 32,
+                          height: 32,
+                          fit: BoxFit.none,
+                        ),
                       ),
                     ),
                   ),
@@ -210,18 +271,28 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 7,
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          offset: Offset(2, 2),
+                          blurRadius: 6,
+                          color: Color(0xFF9E9E9E),
+                          offset: Offset(1, 1),
                         )
                       ],
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: Image.asset(
-                      'assets/images/Vector_(2).png',
-                      width: 32,
-                      height: 32,
-                      fit: BoxFit.none,
+                    child: InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CompleteSignUpScreenWidget(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/Vector_(2).png',
+                        width: 32,
+                        height: 32,
+                        fit: BoxFit.none,
+                      ),
                     ),
                   ),
                   Padding(
@@ -233,18 +304,29 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            blurRadius: 7,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            offset: Offset(2, 2),
+                            blurRadius: 6,
+                            color: Color(0xFF9E9E9E),
+                            offset: Offset(1, 1),
                           )
                         ],
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Image.asset(
-                        'assets/images/logos_facebook.png',
-                        width: 32,
-                        height: 32,
-                        fit: BoxFit.none,
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CompleteSignUpScreenWidget(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/logos_facebook.png',
+                          width: 32,
+                          height: 32,
+                          fit: BoxFit.none,
+                        ),
                       ),
                     ),
                   ),

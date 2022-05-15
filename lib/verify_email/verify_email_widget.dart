@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../home_screen/home_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -58,7 +59,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 6,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: Color(0xFF9E9E9E),
                             offset: Offset(1, 1),
                           )
                         ],
@@ -84,7 +85,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 6,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: Color(0xFF9E9E9E),
                             offset: Offset(1, 1),
                           )
                         ],
@@ -110,7 +111,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 6,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: Color(0xFF9E9E9E),
                             offset: Offset(1, 1),
                           )
                         ],
@@ -136,7 +137,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 6,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: Color(0xFF9E9E9E),
                             offset: Offset(1, 1),
                           )
                         ],
@@ -162,7 +163,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 6,
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: Color(0xFF9E9E9E),
                             offset: Offset(1, 1),
                           )
                         ],
@@ -186,7 +187,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 6,
-                          color: FlutterFlowTheme.of(context).primaryColor,
+                          color: Color(0xFF9E9E9E),
                           offset: Offset(1, 1),
                         )
                       ],
@@ -207,8 +208,13 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 32, 10, 0),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreenWidget(),
+                    ),
+                  );
                 },
                 text: 'Verify',
                 options: FFButtonOptions(

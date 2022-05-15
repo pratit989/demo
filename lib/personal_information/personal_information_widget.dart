@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../verify_email/verify_email_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,9 +53,9 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                   color: FlutterFlowTheme.of(context).primaryBtnText,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -84,7 +85,7 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                       'Firstname',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x993F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -102,9 +103,9 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                   color: FlutterFlowTheme.of(context).primaryBtnText,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -134,7 +135,7 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                       'Lastname',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x983F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -152,9 +153,9 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                   color: FlutterFlowTheme.of(context).primaryBtnText,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -184,7 +185,7 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                       'Birthdate(dd MMM YYYY)',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x983F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -202,9 +203,9 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                   color: FlutterFlowTheme.of(context).primaryBtnText,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 8,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      offset: Offset(2, 2),
+                      blurRadius: 6,
+                      color: Color(0xFF9E9E9E),
+                      offset: Offset(1, 1),
                     )
                   ],
                   borderRadius: BorderRadius.circular(8),
@@ -234,7 +235,7 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
                       'Password',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color: Color(0xFF3F403F),
+                            color: Color(0x993F403F),
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
@@ -246,8 +247,13 @@ class _PersonalInformationWidgetState extends State<PersonalInformationWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 25, 10, 0),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => VerifyEmailWidget(),
+                    ),
+                  );
                 },
                 text: 'Sign Up',
                 options: FFButtonOptions(
