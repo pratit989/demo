@@ -152,188 +152,216 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                         ),
                   ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Stack(
                   children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Container(
-                        width: 92,
-                        height: 37,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF7161EF),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 6,
-                              color: Color(0xFF9E9E9E),
-                              offset: Offset(1, 0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/Vector_(3).png',
-                              width: 16,
-                              height: 12,
-                              fit: BoxFit.cover,
-                            ),
-                            Padding(
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      decoration: BoxDecoration(),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(-1, 0),
+                            child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                              child: Text(
-                                'Hotel',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Work Sans',
-                                      color: Color(0xFFF3F7F5),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.normal,
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                width: 92,
+                                height: 37,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF7161EF),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 6,
+                                      color: Color(0xFF9E9E9E),
+                                      offset: Offset(1, 0),
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/Vector_(3).png',
+                                      width: 16,
+                                      height: 12,
+                                      fit: BoxFit.cover,
                                     ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Text(
+                                        'Hotel',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Work Sans',
+                                              color: Color(0xFFF3F7F5),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Container(
-                        width: 92,
-                        height: 37,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 6,
-                              color: Color(0xFF9E9E9E),
-                              offset: Offset(1, 0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/Group.png',
-                              width: 15.97,
-                              height: 15.98,
-                              fit: BoxFit.cover,
-                            ),
-                            Padding(
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(-0.2, -0.35),
+                            child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                              child: Text(
-                                'Hostel',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Work Sans',
-                                      color: Color(0xFF3F403F),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.normal,
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                width: 92,
+                                height: 37,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBtnText,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 6,
+                                      color: Color(0xFF9E9E9E),
+                                      offset: Offset(1, 0),
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/Group.png',
+                                      width: 15.97,
+                                      height: 15.98,
+                                      fit: BoxFit.cover,
                                     ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Text(
+                                        'Hostel',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Work Sans',
+                                              color: Color(0xFF3F403F),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Container(
-                        width: 92,
-                        height: 37,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 6,
-                              color: Color(0xFF9E9E9E),
-                              offset: Offset(1, 0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/Group_(1).png',
-                              width: 15.97,
-                              height: 15.98,
-                              fit: BoxFit.cover,
-                            ),
-                            Padding(
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0, 0.45),
+                            child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                              child: Text(
-                                'Office',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Work Sans',
-                                      color: Color(0xFF3F403F),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.normal,
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                width: 92,
+                                height: 37,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBtnText,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 6,
+                                      color: Color(0xFF9E9E9E),
+                                      offset: Offset(1, 0),
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/Group_(1).png',
+                                      width: 15.97,
+                                      height: 15.98,
+                                      fit: BoxFit.cover,
                                     ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Text(
+                                        'Office',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Work Sans',
+                                              color: Color(0xFF3F403F),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: Container(
-                        width: 92,
-                        height: 37,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 6,
-                              color: Color(0xFF9E9E9E),
-                              offset: Offset(1, 0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/Group_(2).png',
-                              width: 15.69,
-                              height: 15.43,
-                              fit: BoxFit.cover,
-                            ),
-                            Padding(
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0, 0.5),
+                            child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                              child: Text(
-                                'Garage',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Work Sans',
-                                      color: Color(0xFF3F403F),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.normal,
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                width: 92,
+                                height: 37,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBtnText,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 6,
+                                      color: Color(0xFF9E9E9E),
+                                      offset: Offset(1, 0),
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/Group_(2).png',
+                                      width: 15.69,
+                                      height: 15.43,
+                                      fit: BoxFit.cover,
                                     ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Text(
+                                        'Garage',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Work Sans',
+                                              color: Color(0xFF3F403F),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
