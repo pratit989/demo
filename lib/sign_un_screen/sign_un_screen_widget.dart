@@ -211,15 +211,42 @@ class _SignUnScreenWidgetState extends State<SignUnScreenWidget> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-              child: Text(
-                'Or continue with',
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Spectral',
-                      fontSize: 16,
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  child: Container(
+                    width: 70,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0x323F403F),
                     ),
-              ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 15, 10, 0),
+                  child: Text(
+                    'Or continue with',
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Spectral',
+                          fontSize: 16,
+                        ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  child: Container(
+                    width: 70,
+                    height: 2,
+                    decoration: BoxDecoration(
+                      color: Color(0x323F403F),
+                    ),
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
